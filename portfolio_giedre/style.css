@@ -1,0 +1,275 @@
+/*
+Theme Name: Gil's design
+Author: Giedrė Limantaitė
+Description: Portfolio theme
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&display=swap');
+
+:root {
+    --c-dark: #1E1E1E;
+    --c-light: #E5E8EB;
+    --c-brand-blue: #88D2D4;
+    --c-brand-purple: #8E5F83;
+    --c-text-white: #FFFFFF;
+    --c-text-black: #000000;
+    --h-font: 'Jost';
+    --p-font: 'Jura';
+    --transition: all .6s cubic-bezier(.165, .84, .44, .1);
+}
+
+body {
+    font-family: var(--p-font);
+    line-height: 1.7;
+}
+
+h1, .h1 {
+    font-family: var(--h-font);
+    font-weight: 800;
+    font-size: clamp(100px, 300px, 300px);
+    line-height: 260px;
+    letter-spacing: -10px;
+}
+
+/*
+@media (max-width: 768px) {
+    .h1 {
+        font-family: var(--h-font);
+        font-weight: 800;
+        font-size: 300px;
+        line-height: 260px;
+        letter-spacing: -10px; 
+    }
+}
+
+@media (min-width: 768px) {
+    .h1 {
+        font-family: var(--h-font);
+        font-weight: 800;
+        font-size: 150px;
+        line-height: 120px;
+        letter-spacing: -10px; 
+    }
+}
+*/
+
+h2, .h2 {
+    font-family: var(--h-font);
+    font-weight: 800;
+    font-size: 120px; 
+    line-height: 120px;
+}
+
+h3, .h3 {
+    font-family: jost;
+    font-weight: 200;
+    font-size: 100px; 
+    color: var(--c-text-white);
+}
+
+h4, .h4 {
+    font-family: jost;
+    font-weight: 800;
+    font-size: 60px; 
+    line-height: 60PX;
+}
+
+h5, .h5 {
+    font-family: jost;
+    font-weight: 800;
+    font-size: 36px; 
+    line-height: 36PX;
+}
+
+p, .p {
+    font-family: var(--p-font);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-text-black);
+    transition: var(--transition);
+}
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.navbar {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#side-border-right {
+    border-right: 1px solid #000000;
+}
+
+.text-line-left {
+
+}
+
+#text-line-left {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+  }
+  #text-line-left::before {
+    content: "";
+    display: inline-block;
+    width: 10%; /* Adjust width as needed */
+    height: 2px; /* Adjust height as needed */
+    background-color: #ffffff; /* Adjust color as needed */
+    margin-right: 10px;
+  }
+ 
+  
+  #text-line-left-black {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+  }
+  #text-line-left-black::before {
+    content: "";
+    display: inline-block;
+    width: 10%; /* Adjust width as needed */
+    height: 1px; /* Adjust height as needed */
+    background-color: #000000; /* Adjust color as needed */
+    margin-right: 20px;
+  }
+
+
+@media (min-width:768px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+
+}
+
+@media (max-width:768px){
+    /* Only for mobile version */
+    h1, .h1 {
+        font-size: 130px;
+        line-height: 130px;
+        letter-spacing: -5px;
+    }
+
+}
+
+@media (max-width:768px){
+    /* Only for mobile version */
+    h2, .h2 {
+        font-size: 92px;
+        line-height: 92px;
+        letter-spacing: -5px;
+    }
+
+}
+
+@media (max-width:768px){
+    /* Only for mobile version */
+    h3, .h3 {
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -5px;
+    }
+
+}
+
+
+
+.navbar, .navbar-nav, .nav-link {
+    font-family: var(--p-font);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--c-text-black);
+}
+
+.navbar, .navbar-nav, .nav-link:hover {
+    font-family: var(--p-font);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--c-brand-purple);
+}
+
+.navbar-brand {
+    font-family: var(--h-font);
+    font-weight: 900;
+    font-size: 32px;
+}
+
+
+
+.text-brand-color {
+    color: var(--c-brand-purple);
+}
+
+button .button {
+    font-family: var(--p-font);
+    font-size: 18px;
+}
+
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--c-brand-purple);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img,
+.project .content {
+    transition: var(--transition);
+}
+
+.project:hover .content {
+    top: 0;
+}
+
+.project:hover img {
+    transform: translateY(-100%);
+}
+
+.image {
+    display: block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.vl{
+    height: 500px;
+    border-left: 2px solid black;
+}
+
